@@ -28,7 +28,7 @@ namespace geo {
         /** Name
          * название списка/объекта
          */
-        virtual std::string Name() = 0;
+        virtual BSTR Name() = 0;
 
         /** Group
          * группа (тип)
@@ -43,7 +43,7 @@ namespace geo {
          * родитель
          * @returns AOwner
          */
-        virtual HRESULT Owner() = 0; //не вызывается?
+        virtual HRESULT Owner(IGeoInterface*&) = 0;
 
     };
 

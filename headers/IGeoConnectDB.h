@@ -22,18 +22,18 @@ namespace geo {
         const UserName, UserPassword, ServerName, BaseName: WideString;
         out AError: WideString): HResult; stdcall;*/
         virtual HRESULT ConnectDB(std::byte AConnector,
-                                  std::string UserName,
-                                  std::string UserPassword,
-                                  std::string ServerName,
-                                  std::string BaseName,
-                                  std::string*&) = 0;
+                                  BSTR UserName,
+                                  BSTR UserPassword,
+                                  BSTR ServerName,
+                                  BSTR BaseName,
+                                  BSTR*&) = 0;
 
         /** GetVersionDB
          *  Получить версию БД
          */
         /*function GetVersionDB(out AVersion: integer;
         out AType: WideString): HRESULT; stdcall;*/
-        virtual HRESULT GetVersionDB(int*&, std::string*&) = 0;
+        virtual HRESULT GetVersionDB(int*&, BSTR*&) = 0;
 
         virtual void Disconnect() = 0;
 
@@ -55,7 +55,7 @@ namespace geo {
          */
         /*function NewProject(const AName: WideString;
         out AProject: IGeoProject): HResult; stdcall;*/
-        virtual HRESULT NewProject(std::string AName, geo::IGeoProject*&) = 0;
+        virtual HRESULT NewProject(BSTR AName, geo::IGeoProject*&) = 0;
 
         /** GetTableByID
          * получить таблицу

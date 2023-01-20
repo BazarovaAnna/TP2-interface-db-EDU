@@ -47,11 +47,11 @@ int main() {
     // Вызываем функции из библиотек
     std::cout << TestConnect() << std::endl;
 
-    const std::string dbServerName = "192.168.1.171";
-    const std::string dbBaseName = "v9_install_tech_geosystem_40";
-    const std::string dbUser = "SYSDBA";
-    const std::string dbPas = "masterkey";
-    std::string err;
+    BSTR dbServerName = SysAllocString(L"192.168.1.171");
+    BSTR dbBaseName = SysAllocString(L"v9_install_tech_geosystem_40");
+    BSTR dbUser = SysAllocString(L"SYSDBA");
+    BSTR dbPas = SysAllocString(L"masterkey");
+    BSTR err;
     bool gdbOk = FALSE;
 
     /* TODO - Call pas
