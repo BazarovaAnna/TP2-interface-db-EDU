@@ -16,14 +16,14 @@ namespace geo {
          * @returns Acomps
          */ /* не берем */
         //function GetComponents(out Acomps: IGeoComponents): HResult; stdcall;
-        // virtual HRESULT GetComponents(geo::IGeoComponents *Acomps) = 0; //TODO - out
+        // virtual HRESULT GetComponents(geo::IGeoComponents*&) = 0;
 
         /** GetColums
          * получить список колонок проекта
          * @returns AColumns
          */ /* не берем */
         //function GetColums(out AColumns: IGeoColumns): HResult; stdcall;
-        // virtual HRESULT GetColums(geo::IGeoColumns *AColumns) = 0; // TODO - out
+        // virtual HRESULT GetColums(geo::IGeoColumns*&) = 0;
     };
 
 } // geo

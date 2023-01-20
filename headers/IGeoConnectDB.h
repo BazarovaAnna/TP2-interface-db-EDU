@@ -26,14 +26,14 @@ namespace geo {
                                   std::string UserPassword,
                                   std::string ServerName,
                                   std::string BaseName,
-                                  std::string *AError) = 0; //TODO - out
+                                  std::string*&) = 0;
 
         /** GetVersionDB
          *  Получить версию БД
          */
         /*function GetVersionDB(out AVersion: integer;
         out AType: WideString): HRESULT; stdcall;*/
-        virtual HRESULT GetVersionDB(int *AVersion, std::string *AType) = 0; //TODO - out
+        virtual HRESULT GetVersionDB(int*&, std::string*&) = 0;
 
         virtual void Disconnect() = 0;
 
@@ -41,21 +41,21 @@ namespace geo {
          * Спиок проектов в БД
          */
         //function GetProjects(out AProjects: IGeoProjects): HResult; stdcall;
-        virtual HRESULT GetProjects(geo::IGeoProjects *AProjects) = 0; //TODO - out
+        virtual HRESULT GetProjects(geo::IGeoProjects*&) = 0;
 
         /** GetProjectByID
          * Получить проект
          */
         /*function GetProjectByID(const AID: TGeoID;
         out AProject: IGeoProject): HResult; stdcall;*/
-        virtual HRESULT GetProjectByID(GUID AID, geo::IGeoProject *AProject) = 0; //TODO - out
+        virtual HRESULT GetProjectByID(GUID AID, geo::IGeoProject*&) = 0;
 
         /** NewProject
          * Создать проект
          */
         /*function NewProject(const AName: WideString;
         out AProject: IGeoProject): HResult; stdcall;*/
-        virtual HRESULT NewProject(std::string AName, geo::IGeoProject *AProject) = 0; //TODO - out
+        virtual HRESULT NewProject(std::string AName, geo::IGeoProject*&) = 0;
 
         /** GetTableByID
          * получить таблицу
@@ -63,7 +63,7 @@ namespace geo {
          * @returns ATable
          */ /* не берем */
         //function GetTableByID(const AID: TGeoID; out ATable: IGeoTable): HResult; stdcall;
-        // virtual HRESULT GetTableByID(GUID AID, geo::IGeoTable *ATable) = 0; //TODO - out
+        // virtual HRESULT GetTableByID(GUID AID, geo::IGeoTable*&) = 0;
 
     };
 

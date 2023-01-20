@@ -43,8 +43,7 @@ namespace geo {
          * родитель
          * @returns AOwner
          */
-        //function Owner(out AOwner: IGeoInterface): HResult; stdcall;
-        virtual HRESULT Owner(geo::IGeoInterface *AOwner) = 0; //TODO - out
+        virtual HRESULT Owner() = 0; //не вызывается?
 
     };
 
