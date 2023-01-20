@@ -6,7 +6,6 @@
 #define TP1_DLL_IGEOTABLES_H
 
 #include "IGeoListInterface.h"
-#include "IGeoTable.h"
 
 namespace geo {
 
@@ -15,8 +14,8 @@ namespace geo {
         /** Table
          * таблица
          * @param ind - порядковый индекс
-         */
-        virtual geo::IGeoTable Table(int ind) = 0;
+         */ /* не берем */
+        // virtual geo::IGeoTable Table(int ind) = 0;
     };
 
 } // geo

@@ -7,8 +7,6 @@
 
 #include <windows.h>
 #include "IGeoTables.h"
-#include "IGeoColumns.h"
-#include "IGeoComponents.h"
 
 namespace geo {
     class IGeoProject : public geo::IGeoTables {
@@ -16,14 +14,16 @@ namespace geo {
         /** GetComponents
          * получить список компонентов проекта
          * @returns Acomps
-         */
-        virtual HRESULT GetComponents(geo::IGeoComponents *Acomps) = 0;
+         */ /* не берем */
+        //function GetComponents(out Acomps: IGeoComponents): HResult; stdcall;
+        // virtual HRESULT GetComponents(geo::IGeoComponents *Acomps) = 0; //TODO - out
 
         /** GetColums
          * получить список колонок проекта
          * @returns AColumns
-         */
-        virtual HRESULT GetColums(geo::IGeoColumns *AColumns) = 0;
+         */ /* не берем */
+        //function GetColums(out AColumns: IGeoColumns): HResult; stdcall;
+        // virtual HRESULT GetColums(geo::IGeoColumns *AColumns) = 0; // TODO - out
     };
 
 } // geo

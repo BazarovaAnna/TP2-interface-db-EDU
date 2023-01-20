@@ -10,7 +10,7 @@ namespace geo {
         /** Project
          * Проект (по номеру в списке)
          */
-        virtual geo::IGeoProject Project(const int ind) = 0;
+        virtual geo::IGeoProject Project(int ind) = 0;
     };
 
 } // geo
