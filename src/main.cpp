@@ -20,6 +20,12 @@ int main() {
         return (int)GetLastError();
     }
 
+    /* Implementation pas
+     * function GetModuleObject(ObjectID: TGuid; InterfaceID: TGuid; out ppvObj): HRESULT;
+     * external NameGeoDataDll Name 'GetModuleObject';
+     * function GeoTestConnect: integer;
+     * external NameGeoDataDll Name 'TestConnect';
+     */
     // Указатели на функции
     int (*TestConnect) ();
     HRESULT (*GetModuleObject) ;
@@ -46,13 +52,19 @@ int main() {
     const std::string dbUser = "SYSDBA";
     const std::string dbPas = "masterkey";
     std::string err;
-    geo::IGeoConnectDB gdb;
     bool gdbOk = FALSE;
-    if (GetModuleObject(OBJID_GeoConnectDB, IGeoConnectDB, gdb) = S_OK){
-        gdbOk = gdb.ConnectDB(GeoConnectorFB21, dbUser, dbPas, dbServerName,
-                            dbBaseName, err) == S_OK;
-    }
-    gdb.Disconnect();
+
+    /* TODO - Call pas
+     * if GetModuleObject(OBJID_GeoConnectDB, IGeoConnectDB, gdb) = S_OK then
+     * gdbOk := gdb.ConnectDB(GeoConnectorFB21, dbUser, dbPas, dbServerName,
+     * dbBaseName, err) = S_OK;
+     */
+    /* TODO - Finalization pas
+     * gdb.Disconnect;
+     * gdb := nil;
+     */
+
+
 
     // Отключаем библиотеки
     if(!FreeLibrary(hGeodataDll))
