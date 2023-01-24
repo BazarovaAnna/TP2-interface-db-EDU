@@ -1,9 +1,0 @@
-# ninja log v5
-6	2812	6962511903282716	CMakeFiles/TP2-interface-db.dir/src/main.cpp.obj	ad279bbf9ab2feea
-2813	3013	6962511905203069	TP2-interface-db.exe	78517e2b1f90b2ba
-0	196	6962520844470047	build.ninja	dcd7e3d27774acab
-5	2917	6962520896570638	CMakeFiles/TP2-interface-db.dir/src/main.cpp.obj	902ac6f9de851a41
-2917	3696	6962520904298657	TP2-interface-db.exe	912bade4885e0b74
-1	16	0	clean	22f0f6517bfefbcf
-9	2588	6962521487604486	CMakeFiles/TP2-interface-db.dir/src/main.cpp.obj	902ac6f9de851a41
-2589	3305	6962521494692186	TP2-interface-db.exe	912bade4885e0b74
