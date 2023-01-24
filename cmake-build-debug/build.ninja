@@ -51,7 +51,7 @@ build cmake_object_order_depends_target_TP2-interface-db: phony || CMakeFiles/TP
 
 build CMakeFiles/TP2-interface-db.dir/src/main.cpp.obj: CXX_COMPILER__TP2-interface-db_Debug D$:/Projects/CLionProjects/TP2-interface-db/src/main.cpp || cmake_object_order_depends_target_TP2-interface-db
   DEP_FILE = CMakeFiles\TP2-interface-db.dir\src\main.cpp.obj.d
-  FLAGS = -g -fdiagnostics-color=always
+  FLAGS = -static-libstdc++ -static-libgcc -g -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles\TP2-interface-db.dir
   OBJECT_FILE_DIR = CMakeFiles\TP2-interface-db.dir\src
 
@@ -64,7 +64,7 @@ build CMakeFiles/TP2-interface-db.dir/src/main.cpp.obj: CXX_COMPILER__TP2-interf
 # Link the executable TP2-interface-db.exe
 
 build TP2-interface-db.exe: CXX_EXECUTABLE_LINKER__TP2-interface-db_Debug CMakeFiles/TP2-interface-db.dir/src/main.cpp.obj
-  FLAGS = -g
+  FLAGS = -static-libstdc++ -static-libgcc -g
   LINK_LIBRARIES = -lgeodata_x86_64  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   LINK_PATH = -LD:/Projects/CLionProjects/TP2-interface-db/bin
   OBJECT_DIR = CMakeFiles\TP2-interface-db.dir
