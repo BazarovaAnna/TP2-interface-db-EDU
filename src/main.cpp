@@ -50,7 +50,7 @@ int main() {
     BSTR dbBaseName = SysAllocString(L"D:\\Projects\\CLionProjects\\TP2-interface-db\\techgeosystem40.gdb");//TODO - поменять на свой путь!
     BSTR dbUser = SysAllocString(L"SYSDBA");
     BSTR dbPas = SysAllocString(L"masterkey");
-    BSTR err;
+    BSTR err = NULL;
     bool gdbOk = FALSE;
 
     geo::IGeoConnectDB* gdb = NULL;
