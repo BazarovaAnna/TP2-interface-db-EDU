@@ -47,7 +47,7 @@ int main() {
     std::cout << TestConnect() << std::endl;
 
     BSTR dbServerName = SysAllocString(L"localhost:3050");
-    BSTR dbBaseName = SysAllocString(L"D:\\Projects\\CLionProjects\\TP2-interface-db\\techgeosystem40.gdb");
+    BSTR dbBaseName = SysAllocString(L"D:\\Projects\\CLionProjects\\TP2-interface-db\\techgeosystem40.gdb");//TODO - поменять на свой путь!
     BSTR dbUser = SysAllocString(L"SYSDBA");
     BSTR dbPas = SysAllocString(L"masterkey");
     BSTR err;
@@ -61,7 +61,7 @@ int main() {
     GUID IntID; //?? not sure
     CLSIDFromString(L"{1245DEE9-22FA-4040-BF25-4F52B4BB348F}", &IntID );
 
-    /* TODO - Call pas
+    /* Call pas
      * gdb: IGeoConnectDB;
      * if GetModuleObject(OBJID_GeoConnectDB, IGeoConnectDB, gdb) = S_OK then
      * gdbOk := gdb.ConnectDB(GeoConnectorFB21, dbUser, dbPas, dbServerName,
