@@ -26,14 +26,14 @@ namespace geo {
                                   BSTR UserPassword,
                                   BSTR ServerName,
                                   BSTR BaseName,
-                                  BSTR*&) = 0;
+                                  BSTR&) = 0;
 
         /** GetVersionDB
          *  Получить версию БД
          */
         /*function GetVersionDB(out AVersion: integer;
         out AType: WideString): HRESULT; stdcall;*/
-        virtual HRESULT GetVersionDB(int*&, BSTR*&) = 0;
+        virtual HRESULT GetVersionDB(int&, BSTR&) = 0;
 
         virtual void Disconnect() = 0;
 
