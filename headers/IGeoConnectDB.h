@@ -5,6 +5,7 @@
 #include <windows.h>
 #include "IGeoProjects.h"
 #include "IGeoProject.h"
+#include "IGeoTable.h"
 
 namespace geo {
     class IGeoConnectDB {
@@ -22,18 +23,18 @@ namespace geo {
         const UserName, UserPassword, ServerName, BaseName: WideString;
         out AError: WideString): HResult; stdcall;*/
         virtual HRESULT ConnectDB(std::byte AConnector,
-                                  BSTR UserName,
-                                  BSTR UserPassword,
-                                  BSTR ServerName,
-                                  BSTR BaseName,
-                                  BSTR&) = 0;
+                                  std::string UserName,
+                                  std::string UserPassword,
+                                  std::string ServerName,
+                                  std::string BaseName,
+                                  std::string &) = 0;
 
         /** GetVersionDB
          *  Получить версию БД
          */
         /*function GetVersionDB(out AVersion: integer;
         out AType: WideString): HRESULT; stdcall;*/
-        virtual HRESULT GetVersionDB(int&, BSTR&) = 0;
+        virtual HRESULT GetVersionDB(int&, std::string &) = 0;
 
         virtual void Disconnect() = 0;
 
@@ -55,16 +56,15 @@ namespace geo {
          */
         /*function NewProject(const AName: WideString;
         out AProject: IGeoProject): HResult; stdcall;*/
-        virtual HRESULT NewProject(BSTR AName, geo::IGeoProject*&) = 0;
+        virtual HRESULT NewProject(std::string AName, geo::IGeoProject*&) = 0;
 
         /** GetTableByID
          * получить таблицу
          * @param AID - id БД
          * @returns ATable
-         */ /* не берем */
+         */ /* не берем?? */
         //function GetTableByID(const AID: TGeoID; out ATable: IGeoTable): HResult; stdcall;
-        // virtual HRESULT GetTableByID(GUID AID, geo::IGeoTable*&) = 0;
-
+        virtual HRESULT GetTableByID(GUID AID, geo::IGeoTable*&) = 0;
     };
 
 } // geo
